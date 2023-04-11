@@ -1,14 +1,9 @@
 /******************************************************************************
 
-                01 - Lista de Exercícios - Entrada e Saída
+                02 - Lista de Exercícios - Estrutura Condicional
                 
-2ª Faça um programa que receba um número real, calcule e imprima:
-
- . a parte inteira do número;
- 
- . a parte fracionária do número;
-
- . arredondamento do número.
+2ª Elaborar um algoritmo que lê 2 valores a e b e os escreve com a mensagem: 
+"São múltiplos" ou "Não são múltiplos".
 
 *******************************************************************************/
 
@@ -17,19 +12,22 @@
 
 int main()
 {
-    float num, numFra;
-    short numInt, numArr;
+    int num1, num2, cond;
     
     printf("Informe um número: ");
-    scanf("%f", &num);
+    scanf("%d", &num1);
+    printf("Informe um outro número: ");
+    scanf("%d", &num2);
     
-    numInt = num;
-    numFra = num - numInt;
-    numArr = round(num);
+    cond = num1 % num2;
     
-    printf("Parte inteira do número: %d\n", numInt);
-    printf("Parte fracionário do número: %g\n", numFra);
-    printf("Arredondamento do número: %d\n", numArr);
+    if(cond != 0) {
+        printf("Não são múltiplos.\n");
+        
+    } else {
+        printf("São múltiplos.\n");
+        
+    }
     
     return 0;
 }

@@ -1,30 +1,36 @@
 /******************************************************************************
 
-                01 - Lista de Exercícios - Entrada e Saída
+                02 - Lista de Exercícios - Estrutura Condicional
                 
-1ª Faça um programa que receba o valor de um depósito e o valor da taxa de juros. 
-Calcule e imprima o valor do rendimento e o valor total depois do rendimento.
+1ª Elaborar um algoritmo que lê 3 valores a,b,c e os escreve. A seguir, encontre 
+o maior dos 3 valores e o escreva com a mensagem : "É o maior ".
 
 *******************************************************************************/
 
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-    float deposito, taxa, rendimento, totalRendimento;
+    float num1, num2, num3;
     
-    printf("Informe o valor do deposito: R$");
-    scanf("%f", &deposito);
-    printf("Informe o percentual da taxa: ");
-    scanf("%f", &taxa);
+    printf("Informe um número: ");
+    scanf("%f", &num1);
+    printf("Informe um outro número: ");
+    scanf("%f", &num2);
+    printf("Informe um outro número: ");
+    scanf("%f", &num3);
     
-    rendimento = deposito * (taxa / 100);
-    totalRendimento = deposito - (deposito * (taxa / 100));
-    
-    printf("Valor Rendimento: R$%g\n", rendimento);
-    printf("Valor Total: R$%g\n", totalRendimento);
+    if(num1 > num2 && num1 > num3) {
+        printf("É o maior %g (A).\n", num1);
+        
+    } else if (num2 > num3) {
+        printf("É o maior %g (B).\n", num2);
+        
+    } else {
+        printf("É o maior %g (C).\n", num3);
+        
+    }
     
     return 0;
 }
-
-

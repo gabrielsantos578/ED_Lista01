@@ -1,9 +1,18 @@
 /******************************************************************************
 
-                01 - Lista de Exercícios - Entrada e Saída
+                02 - Lista de Exercícios - Estrutura Condicional
                 
-3ª Faça um programa que receba dois números, calcule e imprima um elevado ao 
-outro (x=pow(base,exp), precisa da biblioteca math.h).
+3ª  Elabore um algoritmo que dada a idade de um nadador classifica-o em uma das seguintes categorias: 
+ 
+ . infantil A =  5 -  7 anos
+
+ . infantil B =  8 - 10 anos
+
+ . juvenil  A = 11 - 13 anos
+
+ . juvenil  B = 14 - 17 anos
+
+ . adulto = maiores de 18 anos
 
 *******************************************************************************/
 
@@ -12,16 +21,30 @@ outro (x=pow(base,exp), precisa da biblioteca math.h).
 
 int main()
 {
-    float num1, num2, result;
+    int idade;
     
-    printf("Informe um número: ");
-    scanf("%f", &num1);
-    printf("Informe um outro número: ");
-    scanf("%f", &num2);
+    printf("Informe a idade (inteira): ");
+    scanf("%d", &idade);
     
-    result = pow(num1, num2);
-    
-    printf("O número %g elevado a %g é igual a %g\n", num1, num2, result);
+    if(idade < 5) {
+        printf("Idade não classificada.\n");
+        
+    } else if(idade < 8) {
+        printf("Infantil A =  5 -  7 anos.\n");
+        
+    } else if(idade < 11) {
+        printf("Infantil B =  8 - 10 anos.\n");
+        
+    } else if(idade < 14) {
+        printf("Juvenil  A = 11 - 13 anos.\n");
+        
+    } else if(idade < 18) {
+        printf("Juvenil  B = 14 - 17 anos.\n");
+        
+    } else {
+        printf("Adulto = maiores de 18 anos.\n");
+        
+    }
     
     return 0;
 }

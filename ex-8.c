@@ -1,8 +1,9 @@
 /******************************************************************************
 
-                01 - Lista de Exercícios - Entrada e Saída
+                02 - Lista de Exercícios - Estrutura Condicional
                 
-8ª Faça um programa que calcule e imprima a área de um trapézio.
+8ª  Escreva um algoritmo que leia três números inteiros e positivos (A, B, C) 
+e mostre-os em ordem decrescente.
 
 *******************************************************************************/
 
@@ -11,20 +12,82 @@
 
 int main()
 {
-    float basem, baseM, lado, altura, base, area;
+    int a, b, c, val1, val2, val3;
     
-    printf("Informe o comprimento do lado do trapézio: ");
-    scanf("%f", &lado);
-    printf("Informe o comprimento da base menor do trapézio: ");
-    scanf("%f", &basem);
-    printf("Informe o comprimento da base maior do trapézio: ");
-    scanf("%f", &baseM);
+    printf("Não informe números negativos, caso o faça será considerado 0.\n");
+    printf("Informe um número positivo: ");
+    scanf("%i", &a);
     
-    base = (baseM - basem) / 2;
-    altura = sqrt((lado*lado) + (base * base));
-    area = ((basem + baseM) * altura) / 2;
+    if(a < 0) {
+        a=0;
+    }
     
-    printf("A área do trapézio é %gm².\n", area);
+    val1 = a;
+    
+    printf("Informe outro número positivo: ");
+    scanf("%i", &b);
+    
+    if(b < 0) {
+        b=0;
+    }
+    
+    if(b >= a) {
+        
+        val1 = b;
+        val2 = a;
+        
+    } else {
+        
+        val2 = b;
+        
+    }
+    
+    printf("Informe outro número positivo: ");
+    scanf("%i", &c);
+    
+    if(c < 0) {
+        c=0;
+    }
+    
+    if(c >= a && c >= b) {
+         
+        if (a >= b) {
+             
+            val1 = c;
+            val2 = a;
+            val3 = b;
+         
+        } else {
+             
+            val1 = c;
+            val2 = b;
+            val3 = a;
+             
+        }
+         
+    } else {
+        
+        if (c >= a && c <= b) {
+            
+            val2 = c;
+            val3 = a;
+            
+        } else if (c <= a && c >= b) {
+            
+            val2 = c;
+            val3 = b;
+            
+        } else {
+            
+            val3 = c;
+            
+        }
+        
+    }
+    
+    printf("\n");
+    printf("Ordem decrescente: %i, %i, %i.\n", val1, val2, val3);
     
     return 0;
 }
+

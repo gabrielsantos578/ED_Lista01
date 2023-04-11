@@ -1,8 +1,9 @@
 /******************************************************************************
 
-                01 - Lista de Exercícios - Entrada e Saída
+                02 - Lista de Exercícios - Estrutura Condicional
                 
-9ª Faça um programa que calcule e imprima a área de um losango.
+9ª  Faça um algoritmo que leia a idade de uma pessoa expressa em anos, meses e 
+dias e mostre-a expressa apenas em dias.
 
 *******************************************************************************/
 
@@ -11,16 +12,14 @@
 
 int main()
 {
-    float diagonalm, diagonalM, area;
+    int idade, ano, mes, dia;
     
-    printf("Informe o comprimento da diagonal menor do losango: ");
-    scanf("%f", &diagonalm);
-    printf("Informe o comprimento da diagonal maior do losango: ");
-    scanf("%f", &diagonalM);
+    printf("Informe sua idade em anos, meses e dias: ");
+    scanf("%i %i %i", &ano, &mes, &dia);
     
-    area = (diagonalm * diagonalM) / 2;
+    idade = (ano * 365) + (mes * 30) + dia;
     
-    printf("A área do losango é %gm².\n", area);
+    printf("Idade em dias: %i.\n", idade);
     
     return 0;
 }

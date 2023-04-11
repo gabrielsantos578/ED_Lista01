@@ -1,10 +1,9 @@
 /******************************************************************************
 
-                01 - Lista de Exercícios - Entrada e Saída
+                02 - Lista de Exercícios - Estrutura Condicional
                 
-10ª Faça um programa que receba o salário de um funcionário, calcule e imprima o 
-valor do imposto de renda a ser pago, sabendo que o imposto equivale a 5% do 
-salário.
+10ª  Faça um algoritmo que leia a idade de uma pessoa expressa em dias e 
+mostre-a expressa em anos, meses e dias.
 
 *******************************************************************************/
 
@@ -13,15 +12,18 @@ salário.
 
 int main()
 {
-    float salario, imposto;
+    int idade, ano, mes, dia;
     
-    printf("Informe o salário: R$");
-    scanf("%f", &salario);
+    printf("Informe sua idade dias: ");
+    scanf("%d", &idade);
     
-    imposto = salario * 0.05;
+    ano = idade / 365;
+    idade = idade % 365;
+    mes = idade / 30;
+    idade = idade % 30;
+    dia = idade;
     
-    printf("O imposto é de R$%g.\n", imposto);
+    printf("Idade é de %i anos, %i meses e %i dias.\n", ano, mes, dia);
     
     return 0;
 }
-
